@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>gprs</class>
+ <widget class="QMainWindow" name="gprs">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>阴极保护监控系统 － 普元科技</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/logo/logo.png</normaloff>:/logo/logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QSplitter" name="split">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="15,70,15">
+        <item>
+         <widget class="QTreeWidget" name="field">
+          <property name="animated">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>作业区</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="wells">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>80</number>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>12</number>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>24</number>
+          </attribute>
+          <attribute name="verticalHeaderMinimumSectionSize">
+           <number>12</number>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>序号</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>井组</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>日期时间</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>总电压(V)</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>总电流(A)</string>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>回路电阻(Ω)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流1(A)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流2(A)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流3(A)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流4(A)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流5(A)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>电流6(A)</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>状态</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="alert"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="frame" native="true"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="date">
+      <property name="currentSection">
+       <enum>QDateTimeEdit::YearSection</enum>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/MM</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblDate">
+      <property name="text">
+       <string>日期月份</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lblLogo">
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>xx油田第三采油厂阴极保护监控系统</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>69</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionWebMail"/>
+   <addaction name="actionSample"/>
+   <addaction name="actionReport"/>
+   <addaction name="actionConfig"/>
+   <addaction name="separator"/>
+   <addaction name="actionHelp"/>
+   <addaction name="separator"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <action name="actionWebMail">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/logo.png</normaloff>:/logo/logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>邮箱网页</string>
+   </property>
+   <property name="toolTip">
+    <string>邮箱网页</string>
+   </property>
+  </action>
+  <action name="actionSample">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/sample.png</normaloff>:/logo/sample.png</iconset>
+   </property>
+   <property name="text">
+    <string>数据采集</string>
+   </property>
+   <property name="toolTip">
+    <string>数据采集</string>
+   </property>
+  </action>
+  <action name="actionReport">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/report.png</normaloff>:/logo/report.png</iconset>
+   </property>
+   <property name="text">
+    <string>报表输出</string>
+   </property>
+   <property name="toolTip">
+    <string>报表输出</string>
+   </property>
+  </action>
+  <action name="actionConfig">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/config.png</normaloff>:/logo/config.png</iconset>
+   </property>
+   <property name="text">
+    <string>配置</string>
+   </property>
+   <property name="toolTip">
+    <string>配置</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/exit.png</normaloff>:/logo/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/logo/help.png</normaloff>:/logo/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+   <property name="toolTip">
+    <string>帮助</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>date</sender>
+   <signal>dateChanged(QDate)</signal>
+   <receiver>gprs</receiver>
+   <slot>on_field_date_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>499</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>759</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>field</sender>
+   <signal>itemClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>gprs</receiver>
+   <slot>on_field_date_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionConfig</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>on_btnConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSample</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>on_btnMail()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReport</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>on_btnReport()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>613</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelp</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>on_btnHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionWebMail</sender>
+   <signal>triggered()</signal>
+   <receiver>gprs</receiver>
+   <slot>on_webmail()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_btnReport()</slot>
+  <slot>on_field_date_changed()</slot>
+  <slot>on_btnMail()</slot>
+  <slot>on_btnConfig()</slot>
+  <slot>on_btnHelp()</slot>
+  <slot>on_webmail()</slot>
+ </slots>
+</ui>

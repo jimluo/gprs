@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>append.png</file>
+    <file>delete.png</file>
+    <file>help.png</file>
+    <file>logo.png</file>
+    <file>config.png</file>
+    <file>exit.png</file>
+    <file>report.png</file>
+    <file>sample.png</file>
+  </qresource>
+</RCC>
